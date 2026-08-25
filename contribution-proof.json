@@ -1,0 +1,7 @@
+{
+  "artifact_url": "https://github.com/ntgreatsaini/technocore-did-starter",
+  "commit": "ca5bc39c0aa9d71ac066d7cabdd51694ef8a2739",
+  "did": "did:key:z6Mkv2ZEGadrbwQYWSmUdkczEQ6iDq2KPhFZ9b4iGFjddDvb",
+  "schema": "technocore-contribution-proof-v1",
+  "signature": "j1dCCDUQPdeZzx-913QvaHkQv5gETDiF54LZsR1zSOhcpaKPrRJTfB5Z8GthAssGkRbNRoUU7HZPktmnSLKDAA"
+}
