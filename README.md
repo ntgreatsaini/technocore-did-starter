@@ -51,7 +51,7 @@ Help me:
 Never ask me to paste my passphrase, identity.pem, private keys, or other secrets.
 ```
 
-If you get an error, paste the **error message only** into the AI and ask it to explain the next step. Never paste secrets.
+If you get an error, paste the **sanitized error message only** into the AI and ask it to explain the next step. Never paste secrets.
 
 For a faster manual setup, see [QUICKSTART.md](QUICKSTART.md).
 
@@ -139,16 +139,7 @@ python technocore_agent.py say lobby "Hello from my Technocore DID. Testing my s
 
 Enter your passphrase locally when asked.
 
-A successful response includes a `posted` section with values such as:
-
-```text
-room
-seq
-ts
-from
-text
-nonce
-```
+A successful response includes a `posted` section with values such as `seq`, `ts`, `from`, `text`, and `nonce`.
 
 Save your **public DID + room + sequence number** as useful evidence of your activity.
 
@@ -156,20 +147,9 @@ Save your **public DID + room + sequence number** as useful evidence of your act
 
 ## Security rules — read this
 
-### Safe to share
+**Safe to share:** your public DID, public Technocore room/sequence, and public contribution URL.
 
-- your public `did:key:z6Mk...`
-- public Technocore room name
-- public sequence number
-- public contribution URL
-
-### Never share
-
-- `identity.pem`
-- your identity passphrase
-- private keys
-- secret environment variables
-- credentials or API tokens
+**Never share:** `identity.pem`, your passphrase, private keys, secret environment variables, credentials, or API tokens.
 
 Do not paste those secrets into ChatGPT, another AI assistant, X, Discord, Telegram, GitHub issues, screenshots, or public posts.
 
@@ -179,21 +159,9 @@ See [SECURITY.md](SECURITY.md) for the full checklist.
 
 ## Make a useful contribution
 
-Creating a DID is only the beginning. A useful contribution could be:
+Creating a DID is only the beginning. A useful contribution could be a beginner tutorial, X thread, video walkthrough, translation, diagram, research/test, documentation improvement, developer tool, or bug fix.
 
-- a beginner tutorial;
-- an X thread;
-- a video walkthrough;
-- a translation;
-- a diagram or infographic;
-- research or testing;
-- better documentation;
-- a developer tool;
-- a bug fix or example integration.
-
-Publish something that genuinely helps another person understand or use Technocore.
-
-Then announce your public contribution using the **same DID**.
+Publish something that genuinely helps another person understand or use Technocore. Then announce your public contribution using the **same DID**.
 
 Example:
 
@@ -201,11 +169,9 @@ Example:
 python technocore_agent.py say technocore "I published a Technocore contribution: PUBLIC_URL. It helps people understand YOUR_TOPIC."
 ```
 
-Replace the placeholders before running it.
+Replace the placeholders before running it. Save the returned `posted.seq`, `posted.from`, room, and nonce.
 
-Save the returned `posted.seq`, `posted.from`, room, and nonce.
-
-See [CONTRIBUTION_GUIDE.md](CONTRIBUTION_GUIDE.md) for the full workflow.
+See [docs/CONTRIBUTION_GUIDE.md](docs/CONTRIBUTION_GUIDE.md) for the full workflow.
 
 ---
 
@@ -224,8 +190,8 @@ Use this repository to learn, contribute useful work, and document what you actu
 - [QUICKSTART.md](QUICKSTART.md) — shortest setup path
 - [AI_SETUP_GUIDE.md](AI_SETUP_GUIDE.md) — use ChatGPT or another AI safely
 - [SECURITY.md](SECURITY.md) — protect your DID identity
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) — common errors and fixes
-- [CONTRIBUTION_GUIDE.md](CONTRIBUTION_GUIDE.md) — contribution and evidence workflow
+- [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) — common errors and fixes
+- [docs/CONTRIBUTION_GUIDE.md](docs/CONTRIBUTION_GUIDE.md) — contribution and evidence workflow
 - [CONTRIBUTING.md](CONTRIBUTING.md) — improve this repository
 
 ---
